@@ -12,7 +12,6 @@
         <h2>Efekty na obrazach</h2>
     </header>
     <main>
-
         <section>
             <img src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku" id="pszczola">
             <form action="">
@@ -46,9 +45,7 @@
     </main>
     <footer>
         <p>
-            <a href="http://www.css.com/" target="_blank">
-                Zobacz inne efekty obrazu
-            </a>
+            <a href="http://www.css.com/" target="_blank">Zobacz inne efekty obrazu</a>
         </p>
         <p>Stronę wykonał: 00000000000</p>
     </footer>
@@ -57,13 +54,12 @@
     function nalozFiltr() {
         const zdjecie = document.getElementById("pszczola");
         const efekty = document.querySelectorAll("input[type='radio']");
-
         efekty.forEach(efekt => {
             if (efekt.checked) {
                 zdjecie.style.filter = efekt.value;
             }
         }
-            
+
         );
     }
 
@@ -80,15 +76,13 @@
     function zmienPrzezroczystosc() {
         const zdjecie = document.getElementById("owoce");
         const wartoscSuwaka = document.getElementById("suwakPrzezroczystosc").value;
-
         zdjecie.style.filter = "opacity(" + wartoscSuwaka + "%)";
     }
 
     function zmienJasnosc() {
         const zdjecie = document.getElementById("zolw");
         const wartoscSuwaka = document.getElementById("suwakJasnosc").value;
-
         zdjecie.style.filter = "brightness(" + wartoscSuwaka + "%)";
     }
-    </script>
+</script>
 </html>
